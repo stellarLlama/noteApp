@@ -10,7 +10,11 @@ let searchBar = document.getElementById("searchBar")
 let notes = []
 
 function deleteNote(evt) {
-    evt.target.parentElement.parentElement.remove()
+    let selector = evt.target.parentElement.parentElement
+    if (selector.className = "note") {
+        console.log(selector)
+        selector.remove()
+    }
 }
 
 function createNote() {
